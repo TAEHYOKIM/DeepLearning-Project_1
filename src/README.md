@@ -18,11 +18,11 @@ main.py파일과 같은 위치에 Chrome driver 또는 phantomjs driver 파일�
 
 : 즉,
 
-  |-module   <- py파일들이 모여있다.
+  |-module    <- py파일들이 모여있다.
   
   |-models    <- 이 부분은 직접 설치 후 생성  해야한다.
   
-  |-data         <- csv파일을 불러오거나 저장할 폴더 / 포스터 이미지 파일이 저장될 폴더이다. 직접 생성
+  |-data      <- csv파일을 불러오거나 저장할 폴더 / 포스터 이미지 파일이 저장될 폴더이다. 직접 생성
   
   |-main.py   <- 모든 실행을 가능하게하는 파이썬 파일
 
@@ -33,26 +33,26 @@ main.py파일과 같은 위치에 Chrome driver 또는 phantomjs driver 파일�
 
 ### - module >merge_csv.py
 
-data = pd.read_csv("/home/itwill02/project/test/data/"+str(i)+".csv")  -  data폴더로 지정
+data = pd.read_csv("/home/itwill02/project/test/data/"+str(i)+".csv")  #data폴더로 지정
 
-data1 = pd.read_csv("/home/itwill02/project/test/data/mdict"+str(i)+".csv") -  data폴더로 지정
+data1 = pd.read_csv("/home/itwill02/project/test/data/mdict"+str(i)+".csv")  #data폴더로 지정
 
-a1.to_csv('/home/itwill02/project/test/data/'+str(i)+'.csv',mode='w',encoding='utf-8')   -  data폴더로 지정
+a1.to_csv('/home/itwill02/project/test/data/'+str(i)+'.csv',mode='w',encoding='utf-8')  #data폴더로 지정
 
 
 ### - module >img_text_change.py
 
 sys.path.append('/home/itwill02/models/research') -models 경로
 
-sys.path.append('/home/itwill02/models/research/object_detection/utils')  -models 경로
+sys.path.append('/home/itwill02/models/research/object_detection/utils')  #models 경로
 
-cnt = len(os.listdir('/home/itwill02/project/data/poster1'))   -  data폴더로 지정
+cnt = len(os.listdir('/home/itwill02/project/data/poster1'))  #data폴더로 지정
 
-for i in (os.listdir('/home/itwill02/project/data/poster1')):   -  data폴더로 지정
+for i in (os.listdir('/home/itwill02/project/data/poster1')):  #data폴더로 지정
 
-file_name = '/home/itwill02/project/data/poster1/'+i   -  data폴더로 지정
+file_name = '/home/itwill02/project/data/poster1/'+i   #data폴더로 지정
 
-df.to_csv("/home/itwill02/project/data/poster1/od_d.csv",mode="w",encoding="utf-8")   -  data폴더로 지정
+df.to_csv("/home/itwill02/project/data/poster1/od_d.csv",mode="w",encoding="utf-8")  #data폴더로 지정
 
 
 ### - module >img_save.py
@@ -68,15 +68,15 @@ with open('/home/itwill02/project/data/poster1/' + str(mn)+'.jpg', 'wb') as w: #
 
 ### - main.py
 
-sys.path.append('/home/itwill02/project/test/module')  - 이 부분은 모듈 경로를 써준다.
+sys.path.append('/home/itwill02/project/test/module')  #이 부분은 모듈 경로를 써준다.
 
-url = '/home/itwill02/project/test/'                                   - 이 부분은 csv파일 저장 경로를 써준다. data폴더로 지정
+url = '/home/itwill02/project/test/'                                   #이 부분은 csv파일 저장 경로를 써준다. data폴더로 지정
 
-result1 = pd.read_csv('/home/itwill02/project/test/data/total_res.csv')   -데이터 파일의 경로를 써준다. total_res.csv는 컬러데이터를 뺀 모든 정보가 들어있는 파일
+result1 = pd.read_csv('/home/itwill02/project/test/data/total_res.csv')   #데이터 파일의 경로를 써준다. total_res.csv는 컬러데이터를 뺀 모든 정보가 들어있는 파일
 
-result2 = pd.read_csv('/home/itwill02/project/test/data/total_color_data.csv')   - 데이터 파일 경로를 써준다. total_color_data.csv파일은 컬러 정보가 들어 있는 파일
+result2 = pd.read_csv('/home/itwill02/project/test/data/total_color_data.csv')   #데이터 파일 경로를 써준다. total_color_data.csv파일은 컬러 정보가 들어 있는 파일
 
-test = pd.read_csv("/home/itwill02/project/test/data/youplz.csv")  -예측해볼 데이터가 들어있는 파일 경로를 써준다. youplz.csv는 에측할 포스터에서 추츨한 정보가 보관되어 있는 파일
+test = pd.read_csv("/home/itwill02/project/test/data/youplz.csv")  #예측해볼 데이터가 들어있는 파일 경로를 써준다. youplz.csv는 에측할 포스터에서 추츨한 정보가 보관되어 있는 파일
 
 
 ## 5. main.py 실행안내
